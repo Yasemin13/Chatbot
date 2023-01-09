@@ -61,17 +61,23 @@ while True:
     print("To find a branch near you, enter 5")
     print("If you have any other questions, enter 6, and we will get you in contacts with a real person")
     h= int(input(""))
+
+    
     if h == 1:
       print("We have 2 apptions of checking accounts.")
       print("Basic: $10 a month and addtional fees for services.")
       print("Advanced: $20 a month and free services")
       print("for more information or to sigh up call 810-555-5555")
+      
     elif h == 2:
       print("Visit our website for currect the intrest rates we offer at www.randombank/savingaccount.com")
+      
     elif h == 3:
       print("We offer 6 month 12 month 24 month and 60 month certificates all require a $1000 minumun balance. For current rates visit www.randombank/CD.com")
+      
     elif h == 4:
       print("We have veriouse credit card for many needs, please visit www.randombank/creditcard.com")
+      
     elif h == 5:
       i= int(input("Please enter your zip code so we can find a bank nearest to you"))
       
@@ -80,8 +86,10 @@ while True:
         print("A zip code must be 5 digits")
         i= int(input("Please enter your zip code so we can find a bank nearest to you"))
       print("The nearest bank to you based off of you zip code is 123 Main St " + str(i))
+      
     else:
       print("Please contact 810-555-5555 for more information or visit www.randombank.com ")
+      
   else:
     print("-please enter 1,2, or 3")
     print("\n\nTo check your account balance type 1")

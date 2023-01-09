@@ -16,6 +16,10 @@ while True:
     print("To ask about additional services type 3")
     a= (input(""))
 
+
+
+    
+
   a= int(a)
   if a == 1:
   #When you choose option 1 you put in your account number and pin   (you can put whaterver numbers you want)
@@ -25,9 +29,14 @@ while True:
       b= (input("Please enter 7 digit account number"))
 
     c= (input("Enter account pin for " + str(b) + "  "))
+    while (c.isnumeric() != True or len(c) != 4):
+      c= (input("Please enter 4 digit account pin"))
     
     d= random.randint(0, 1000000)
     print("Your account balance is currently $" + str(d/100))
+
+
+    
 
   elif a == 2:
 #If you choose 2 you are asked a account number, an amount, and another account number to transfer the funds to. after this finishes it takes you back. 
@@ -38,6 +47,10 @@ while True:
     g= int(input("What is the account number you want to transfer the $"+ str(f) +" to? "))
     print("$" + str(f) + " from " + str(e) + " has been transfered to " + str(g))
 
+
+
+
+  
   elif a == 3:
 #if you choose 3 it gives you a few things you can ask about and tells you a little information on them. After they give you a number to call to get more information.
     print("\nWhat are you curious about? ")

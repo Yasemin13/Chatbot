@@ -9,27 +9,32 @@ while True:
   print("To ask about additional services type 3")
   a= (input(""))
 
-  x = a.isnumeric()
-  while (x != True):
+  while (a.isnumeric() != True):
     print("Please enter 1,2, or 3")
     print("\n\nTo check your account balance type 1")
     print("To transfer fundings type 2")
     print("To ask about additional services type 3")
     a= (input(""))
-    x = a.isnumeric()
+
   a= int(a)
   if a == 1:
   #When you choose option 1 you put in your account number and pin   (you can put whaterver numbers you want)
   #It will generate a random amout of money for you account and that will stay your amount unless you transfer from other accounts
-    b= int(input("Alright, to check your account balance insert account number."))
+    b= (input("Alright, to check your account balance insert account number."))
+    while (b.isnumeric() != True or len(b) != 7):
+      b= (input("Please enter 7 digit account number"))
+
     c= (input("Enter account pin for " + str(b) + "  "))
+    
     d= random.randint(0, 1000000)
     print("Your account balance is currently $" + str(d/100))
 
   elif a == 2:
 #If you choose 2 you are asked a account number, an amount, and another account number to transfer the funds to. after this finishes it takes you back. 
     e= int(input("What is the account number you want to transfer money from? "))
+          
     f= int(input("How much money would you like to transfer?"))
+      
     g= int(input("What is the account number you want to transfer the $"+ str(f) +" to? "))
     print("$" + str(f) + " from " + str(e) + " has been transfered to " + str(g))
 

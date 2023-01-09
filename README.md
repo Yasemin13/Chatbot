@@ -1,3 +1,9 @@
-# Chatbot
-Chatbot project for Elite 101
-This line is added from Repl.it
+# Introduction
+
+This is a repository created by Yasemin
+
+## Usage
+
+Run this command to execute the application:
+
+`python filename.py`

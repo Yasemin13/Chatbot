@@ -7,23 +7,33 @@ while True:
   print("\n\nTo check your account balance type 1")
   print("To transfer fundings type 2")
   print("To ask about additional services type 3")
-  a= int(input(""))  
+  a= (input(""))
+
+  x = a.isnumeric()
+  while (x != True):
+    print("Please enter 1,2, or 3")
+    print("\n\nTo check your account balance type 1")
+    print("To transfer fundings type 2")
+    print("To ask about additional services type 3")
+    a= (input(""))
+    x = a.isnumeric()
+  a= int(a)
   if a == 1:
-#When you choose option 1 you put in your account number and pin (you can put whaterver numbers you want)
-#It will generate a random amout of money for you account and that will stay your amount unless you transfer from other accounts
+  #When you choose option 1 you put in your account number and pin   (you can put whaterver numbers you want)
+  #It will generate a random amout of money for you account and that will stay your amount unless you transfer from other accounts
     b= int(input("Alright, to check your account balance insert account number."))
     c= (input("Enter account pin for " + str(b) + "  "))
     d= random.randint(0, 1000000)
     print("Your account balance is currently $" + str(d/100))
 
-  if a == 2:
+  elif a == 2:
 #If you choose 2 you are asked a account number, an amount, and another account number to transfer the funds to. after this finishes it takes you back. 
     e= int(input("What is the account number you want to transfer money from? "))
     f= int(input("How much money would you like to transfer?"))
     g= int(input("What is the account number you want to transfer the $"+ str(f) +" to? "))
     print("$" + str(f) + " from " + str(e) + " has been transfered to " + str(g))
 
-  if a == 3:
+  elif a == 3:
 #if you choose 3 it gives you a few things you can ask about and tells you a little information on them. After they give you a number to call to get more information.
     print("\nWhat are you curious about? ")
     print("If you would like to learn about how to open a checking account, enter 1 ")
@@ -54,6 +64,12 @@ while True:
       print("The nearest bank to you based off of you zip code is 123 Main St " + str(i))
     else:
       print("Please contact 810-555-5555 for more information or visit www.randombank.com ")
+  else:
+    print("-please enter 1,2, or 3")
+    print("\n\nTo check your account balance type 1")
+    print("To transfer fundings type 2")
+    print("To ask about additional services type 3")
+    a= int(input("")) 
     
 
   

@@ -1,6 +1,6 @@
 # Introduction
 
-This is a repository created by Yasemin
+This is a repository created by *Yasemin*
 
 ## Usage
 
